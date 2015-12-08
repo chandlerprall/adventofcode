@@ -4,7 +4,6 @@ var input = fs.readFileSync('input.txt').toString();
 var boxes = input.split(/[\r\n]+/g);
 var ribbon_needed = boxes.reduce(
     function(ribbon_needed, box) {
-
         var dimensions = box.split('x').map(function(dimension) {
             return parseInt(dimension, 10);
         });
@@ -28,4 +27,5 @@ var ribbon_needed = boxes.reduce(
     },
     0
 );
+
 console.log(ribbon_needed);

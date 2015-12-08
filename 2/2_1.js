@@ -10,7 +10,7 @@ var square_feet_needed = boxes.reduce(
             dimensions[0] * dimensions[2],
             dimensions[1] * dimensions[2]
         ];
-        var smallest = Math.min(sides[0], sides[1], sides[2]);
+        var smallest = Math.min.apply(Math, sides);
         return square_feet_needed +
             2 * sides[0] +
             2 * sides[1] +
@@ -19,4 +19,5 @@ var square_feet_needed = boxes.reduce(
     },
     0
 );
+
 console.log(square_feet_needed);
